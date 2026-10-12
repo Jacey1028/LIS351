@@ -1,0 +1,477 @@
+/* a4stylesheet.css
+   A4: Intro CSS Fill-in Template
+   Instructions: rename this file to styles.css and complete each TODO block.
+*/
+
+
+/* ===== Base styles (mostly done) ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #253c33;
+  background: #f4f8f4;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.site-header {
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  border-color: #d7e2dc;
+}
+
+.header-inner {
+  /* TODO A (Flexbox):
+     Make the brand appear on the left and the navigation on the right.
+     Requirements:
+       - Use flexbox
+       - Center items vertically
+       - Put space between left and right
+  */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px 0;
+}
+
+.brand {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.brand .dot {
+  /* TODO B (Color):
+     Make the dot a light blue accent color (choose a readable blue).
+  */
+  color: #287b9a;
+}
+
+.site-nav a {
+  margin-left: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #444;
+  font-weight: 700;
+}
+
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Hero ===== */
+.hero {
+  /* TODO C (Background image hero):
+     Turn this into a hero banner with a background image.
+     Requirements:
+       - Use a background image URL (use the one below)
+       - Make it cover the area and center it
+       - Add a light overlay so text is readable (hint: use a linear-gradient + image)
+       - Set a minimum height (e.g., 360px)
+  */
+  /* My image:
+     https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=60
+  */
+  background-color: #dceef0;
+  background-image: linear-gradient(rgba(245, 251, 249, .78), rgba(245, 251, 249, .78)),
+  url("images/forest.gif");
+  background-size: cover;
+  background-position: center;
+  min-height: 360px;
+}
+
+.hero-content {
+  /* TODO D (Center content):
+     Center the hero text horizontally.
+     Add vertical padding so it doesn't feel cramped.
+  */
+  text-align: center;
+  padding: 76px 0;
+}
+
+.hero h1 {
+  /* TODO E (Typography):
+     Make the headline large and uppercase.
+     (e.g., font-size around 42–48px, text-transform uppercase)
+  */
+  margin: 0;
+  font-size: 46px;
+  text-transform: uppercase;
+  line-height: 1.15;
+  color: #203f35;
+}
+
+.hero-subhead {
+  /* TODO F (Typography):
+     Make this slightly smaller than h1 and a softer color.
+     (e.g., font-size ~20–24px; color #555)
+  */
+  margin: 6px 0 22px;
+  font-size: 22px;
+  color: #456158;
+}
+
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #287b9a;
+}
+
+.hero-description {
+  max-width: 580px;
+  margin: 0 auto 26px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.btn-dark {
+  /* TODO G (Button styling):
+     Make this a dark filled button with white text.
+     (e.g., background #333; color #fff)
+  */
+  background: #244b3a;
+  color: #fff;
+  border: 2px solid #244b3a;
+}
+
+.btn-outline {
+  /* TODO H (Button styling):
+     Make this an outlined button with a blue border and matching text.
+     (e.g., border: 2px solid ...; color: ...; background: transparent)
+  */
+  border: 2px solid #287b9a;
+  color: #287b9a;
+  background: transparent;
+}
+
+.btn:hover {
+  text-decoration: none;
+  background: #19392b;
+  color: #fff;
+  border-color: #19392b;
+}
+
+.btn-outline:hover {
+  background: #287b9a;
+  border-color: #287b9a;
+}
+
+/* ===== Features (3 columns) ===== */
+.features {
+  padding: 42px 0;
+}
+
+.features-grid {
+  /* TODO I (Layout):
+     Arrange the three feature blocks in a row (desktop).
+     Requirements:
+       - Use flexbox
+       - Add a gap between items (e.g., 26px)
+  */
+  display: flex;
+  gap: 26px;
+}
+
+.feature {
+  /* TODO J (Sizing / alignment):
+     Make each feature take equal width and center its text.
+  */
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  border: 2px solid #ddd;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  color: #244b3a;
+  font-size: 22px;
+  border-color: #c6dacf;
+  background: #e4eee6;
+}
+
+.feature h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.feature p {
+  margin: 0;
+  color: #4d6258;
+}
+
+/* ===== Featured content ===== */
+.featured {
+  padding: 42px 0 36px;
+  background: #e5eee6;
+}
+
+.section-title {
+  text-align: center;
+  margin: 0;
+  font-size: 23px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #244b3a;
+}
+
+.section-lede {
+  text-align: center;
+  max-width: 680px;
+  margin: 10px auto 22px;
+  color: #4d6258;
+  font-size: 16px;
+}
+
+.media {
+  background: #eaeaea;
+  border: 1px solid #ddd;
+  height: auto;
+  display: block;
+  place-items: center;
+  width: 100%;
+  border-radius: 8px;
+  border-color: #d7e2dc;
+}
+
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #4d6258;
+  text-align: center;
+}
+
+/* ===== Secondary content (2 cards) ===== */
+.secondary {
+  padding: 34px 0 44px;
+}
+
+.secondary-grid {
+  /* TODO K (Layout):
+     Put the two cards next to each other on desktop.
+     Requirements:
+       - Use flexbox
+       - Add a gap (e.g., 26px)
+  */
+  display: flex;
+  gap: 26px;
+}
+
+.card {
+  /* TODO L (Card styling):
+     Give each card a border and make it take equal width.
+     (Hint: flex: 1; border: 1px solid #eee)
+  */
+  flex: 1;
+  border: 1px solid #d7e2dc;
+  min-width: 0;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-text {
+  padding: 18px;
+}
+
+.card-text h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card-text p {
+  margin: 0 0 14px;
+  color: #4d6258;
+  font-size: 14px;
+}
+
+.card-image {
+  /* TODO M (Image block):
+     Make the card image behave like a background image:
+       - cover
+       - centered
+  */
+  min-height: 230px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Optional images (already provided) */
+.img-a {
+  background-image: url("images/biome.png");
+  background-position: center;
+}
+.img-b {
+  background-image: url("images/boss.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #ddd;
+}
+
+.card-text h2 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: #e5eee6;
+  padding: 42px 0;
+}
+
+.cta-inner {
+  /* TODO N (Center CTA):
+     Center the CTA text and button.
+  */
+  text-align: center;
+}
+
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid #eee;
+  padding: 24px 0;
+  border-color: #d7e2dc;
+}
+
+.footer-inner {
+  /* TODO O (Footer layout):
+     Arrange footer-left on the left and footer link columns on the right.
+     Requirements:
+       - Use flexbox
+       - Add a gap (e.g., 24px)
+       - Space items out (left/right)
+  */
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-left {
+  max-width: 360px;
+  color: #4d6258;
+  font-size: 12px;
+}
+
+.footer-left a {
+  color: #3a88a8;
+}
+
+.footer-cols {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.footer-col h4 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 12px;
+  color: #4d6258;
+  margin: 6px 0;
+}
+
+
+/* ===== Additional interaction styles ===== */
+.cta h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+a:focus-visible {
+  outline: 3px solid #287b9a;
+  outline-offset: 5px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -100px;
+  background: #fff;
+  padding: 12px;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* ===== Responsive layout ===== */
+@media (max-width: 760px) {
+  .header-inner, .features-grid, .secondary-grid, .footer-inner { flex-direction: column; }
+  .header-inner { align-items: flex-start; gap: 14px; }
+  .hero h1 { font-size: 34px; }
+  .hero-content { padding: 54px 0; }
+  .hero-subhead { font-size: 20px; }
+  .features-grid { gap: 32px; }
+  .card { width: 100%; }
+}
+@media (max-width: 420px) {
+  .card { grid-template-columns: 1fr; }
+  .card-image { min-height: 150px; }
+  .hero h1 { font-size: 29px; }
+  .site-nav ul { gap: 12px; }
+}
